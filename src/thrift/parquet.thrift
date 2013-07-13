@@ -142,6 +142,11 @@ enum Encoding {
   /** Bit packed encoding.  This can only be used if the data has a known max
    * width.  Usable for definition/repetition levels encoding.  **/
   BIT_PACKED = 4;
+  
+  /** Delta zigzag encoding. Can only be used for non negative integers. Works
+   * best if the values that follow each other are close enough.
+   */
+  DELTA = 5;
 }
 
 /**
