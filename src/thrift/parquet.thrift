@@ -143,7 +143,8 @@ enum Encoding {
    * width.  Usable for definition/repetition levels encoding.  **/
   BIT_PACKED = 4;
   
-  /** Delta zigzag encoding. Can only be used for non negative integers. Works
+  /** Delta zigzag encoding. Can only be used when the difference between two 
+   * consecutive integers fit into the signed 32-bit integer type. Works
    * best if the values that follow each other are close enough.
    */
   DELTA = 5;
